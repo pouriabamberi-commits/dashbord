@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assests/css/style.css" />
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <title>bootstrap | dashbord</title>
+</head>
+
+<body>
+    <section class="container-fluid">
+        <div class="row">
+            <!-- side bar  -->
+            <aside class="col-2 shadow min-vh-100">
+                <div>
+                    <!-- top side bar -->
+                    <div class="border-bottom border-1 p-1">
+                        <a href="" class="text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                class="fs-4 text-warning me-1 duo-icon duo-icon-box-2" data-duoicon="box-2">
+                                <path fill="currentColor"
+                                    d="m20.765 7.982.022.19.007.194v7.268a2.5 2.5 0 0 1-1.099 2.07l-.15.095-6.295 3.634-.124.067-.126.06v-8.99l7.765-4.588Z"
+                                    class="duoicon-secondary-layer" opacity=".3"></path>
+                                <path fill="currentColor"
+                                    d="m13.25 2.567 6.294 3.634c.05.03.1.06.148.092L12 10.838 4.308 6.293a2.81 2.81 0 0 1 .148-.092l6.294-3.634a2.498 2.498 0 0 1 2.5 0Z"
+                                    class="duoicon-primary-layer"></path>
+                                <path fill="currentColor"
+                                    d="M3.235 7.982 11 12.571v8.988a2.339 2.339 0 0 1-.25-.126l-6.294-3.634a2.502 2.502 0 0 1-1.25-2.165V8.366c0-.13.01-.258.03-.384h-.001Z"
+                                    class="duoicon-secondary-layer" opacity=".3"></path>
+                            </svg>
+                            <span class="fw-bold fs-5 text-secondary-emphasis">داشبورد</span>
+                        </a>
+                    </div>
+                    <!-- main side bar -->
+                    <ul class="nav nav-pills d-flex py-2">
+                        <li class="nav-item w-100">
+                            <a href="" class="nav-link text-decoration-none text-light active py-2">داشبورد</a>
+                        </li>
+                        <li class="nav-item w-100">
+                            <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">گفتوگو</a>
+                        </li>
+                        <li class="nav-item w-100">
+                            <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">تیکت ها</a>
+                        </li>
+                        <li class="nav-item w-100">
+                            <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">مالی </a>
+                        </li>
+                        <li class="nav-item w-100">
+                            <div class="accordion accordion-flush" id="accordion-aside">
+                                <div class="accordion-item">
+                                    <a href=""
+                                        class="accordion-button nav-link fw-normal py-2 px-3 text-decoration-none text-secondary-emphasis collapsed"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#accordion-targ"
+                                        aria-expanded="false" aria-controls="accordion-targ">
+                                        صفحات
+                                    </a>
+                                    <div id="accordion-targ" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordion-aside">
+                                        <ul class=" small">
+                                            <li class="nav-item">
+                                                <a class="nav-link text-secondary-emphasis px-0" href="">صفحه 1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-secondary-emphasis px-0" href="">صفحه 2</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-secondary-emphasis px-0" href="">صفحه 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item w-100">
+                            <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">پروژه ها </a>
+                        </li>
+                        <li class="nav-item w-100">
+                            <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">مهارت های من
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- main -->
+            <main class="col-10">
+                <div class="px-2 px-lg-3 row">
+                    <!-- header  -->
+                    <header class=" border-bottom border-1 py-1 py-lg-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <input type="search" placeholder="جستجو" class="form-control d-inline-block">
+                            </div>
+                            <div class="col-8">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <!-- theme drapdown  -->
+                                    <div class="dropdown d-flex justify-content-end align-items-center">
+                                        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            تغییر تم
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item active" href="#"><i
+                                                        class="bi bi-brightness-high pe-1"></i>روشن</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-moon pe-1"></i> تاریک
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- profile dropdown -->
+                                    <div class="dropdown">
+                                        <button class="btn border-0 py-0 " data-bs-toggle="dropdown">
+                                            <img src="./assests/img/photo-6.jpg"
+                                                class="rounded-circle img-thumbnail text-success border-2" width="50px"
+                                                height="50px" alt="">
+                                        </button>
+                                        <div class="dropdown-menu" style="width: 250px;">
+                                            <div class="py-1">
+                                                <!-- img -->
+                                                <div class="d-flex justify-content-center">
+                                                    <img src="./assests/img/photo-2.jpg" width="50px" height="50px"
+                                                        class="rounded-circle img-thumbnail border-2 text-success"
+                                                        alt="">
+                                                </div>
+                                                <!-- name -->
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <span class="spinner-grow spinner-grow-sm text-success m-1"></span>
+                                                    <span class="small fw-semibold">پوریا بامبری</span>
+                                                </div>
+                                                <!-- list -->
+                                                <ul class="nav d-flex flex-column">
+                                                    <li class="nav-item">
+                                                        <a href=""
+                                                            class="text-decoration-none text-secondary-emphasis nav-link fs-6">
+                                                            <i class="bi bi-person fs-6 me-1"></i>
+                                                            <span class="small">حساب کاربری</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href=""
+                                                            class="text-decoration-none text-secondary-emphasis nav-link fs-6">
+                                                            <i class="bi bi-gear fs-6 me-1"></i>
+                                                            <span class="small">تنظیمات</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href=""
+                                                            class="text-decoration-none text-secondary-emphasis nav-link fs-6">
+                                                            <i class="bi bi-coin fs-6 me-1"></i>
+                                                            <span class="small">مالی</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href=""
+                                                            class="text-decoration-none text-secondary-emphasis nav-link fs-6">
+                                                            <i class="bi bi-person-add fs-6 me-1"></i>
+                                                            <span class="small">افزودن حساب</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <hr class="dropdown-divider m-0">
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <button class="btn btn-outline-secondary mt-2 w-100">
+                                                            <i class="bi bi-box-arrow-right"></i>
+                                                            <span>سیک تیر</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </main>
+
+        </div>
+    </section>
+</body>
+
+</html>
