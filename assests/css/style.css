@@ -1,3 +1,26 @@
-body{
-    font-family:"vazirmatn" , serif;
+body {
+    font-family: "vazirmatn", serif;
+}
+
+
+.me-10 {
+    margin: -10px;
+}
+
+.w-h-35px {
+    width: 35px;
+    height: 35px;
+}
+
+.x-small {
+    font-size: 0.7rem;
+}
+
+.last-activity li:not(:last-child)>span::after {
+    content: '';
+    width: 2px;
+    height: 50px;
+    background-color: var(--bs-primary-bg-subtle);
+    bottom: -20%;
+    position: absolute;
 }

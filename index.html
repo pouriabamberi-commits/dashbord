@@ -26,11 +26,11 @@
     <title>bootstrap | dashbord</title>
 </head>
 
-<body>
+<body data-bs-theme="light">
     <section class="container-fluid">
         <div class="row">
             <!-- side bar  -->
-            <aside class="col-2 shadow min-vh-100">
+            <aside class="d-none d-lg-block col-2 shadow min-vh-100">
                 <div>
                     <!-- top side bar -->
                     <div class="border-bottom border-1 p-1">
@@ -101,13 +101,89 @@
                 </div>
             </aside>
             <!-- main -->
-            <main class="col-10">
-                <div class="px-2 px-lg-3 row">
+            <main class="col-12 col-lg-10">
+                <div class="px-2 px-lg-3 row g-3 g-lg-4">
                     <!-- header  -->
                     <header class=" border-bottom border-1 py-1 py-lg-2">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-4 d-none d-lg-block">
                                 <input type="search" placeholder="جستجو" class="form-control d-inline-block">
+                            </div>
+                            <button class="btn d-inline col-4 d-lg-none p-0" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#demo">
+                                <i class="bi bi-list fs-3 d-flex align-items-center"></i>
+                            </button>
+                            <div class="offcanvas offcanvas-start px-0" id="demo">
+                                <aside class="w-100 d-lg-block shadow min-vh-100 px-2">
+                                    <div>
+                                        <!-- top side bar -->
+                                        <div class="border-bottom border-1 p-1">
+                                            <a href="" class="text-decoration-none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                                    class="fs-4 text-warning me-1 duo-icon duo-icon-box-2" data-duoicon="box-2">
+                                                    <path fill="currentColor"
+                                                        d="m20.765 7.982.022.19.007.194v7.268a2.5 2.5 0 0 1-1.099 2.07l-.15.095-6.295 3.634-.124.067-.126.06v-8.99l7.765-4.588Z"
+                                                        class="duoicon-secondary-layer" opacity=".3"></path>
+                                                    <path fill="currentColor"
+                                                        d="m13.25 2.567 6.294 3.634c.05.03.1.06.148.092L12 10.838 4.308 6.293a2.81 2.81 0 0 1 .148-.092l6.294-3.634a2.498 2.498 0 0 1 2.5 0Z"
+                                                        class="duoicon-primary-layer"></path>
+                                                    <path fill="currentColor"
+                                                        d="M3.235 7.982 11 12.571v8.988a2.339 2.339 0 0 1-.25-.126l-6.294-3.634a2.502 2.502 0 0 1-1.25-2.165V8.366c0-.13.01-.258.03-.384h-.001Z"
+                                                        class="duoicon-secondary-layer" opacity=".3"></path>
+                                                </svg>
+                                                <span class="fw-bold fs-5 text-secondary-emphasis">داشبورد</span>
+                                            </a>
+                                        </div>
+                                        <!-- main side bar -->
+                                        <ul class="nav nav-pills d-flex py-2">
+                                            <li class="nav-item w-100">
+                                                <a href="" class="nav-link text-decoration-none text-light active py-2">داشبورد</a>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">گفتوگو</a>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">تیکت ها</a>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">مالی </a>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <div class="accordion accordion-flush" id="accordion-aside">
+                                                    <div class="accordion-item">
+                                                        <a href=""
+                                                            class="accordion-button nav-link fw-normal py-2 px-3 text-decoration-none text-secondary-emphasis collapsed"
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#accordion-targ"
+                                                            aria-expanded="false" aria-controls="accordion-targ">
+                                                            صفحات
+                                                        </a>
+                                                        <div id="accordion-targ" class="accordion-collapse collapse"
+                                                            data-bs-parent="#accordion-aside">
+                                                            <ul class=" small">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link text-secondary-emphasis px-0" href="">صفحه 1</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link text-secondary-emphasis px-0" href="">صفحه 2</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link text-secondary-emphasis px-0" href="">صفحه 3</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">پروژه ها </a>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <a href="" class="nav-link text-decoration-none text-secondary-emphasis py-2">مهارت های من
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </aside>
                             </div>
                             <div class="col-8">
                                 <div class="d-flex justify-content-end align-items-center">
@@ -118,10 +194,18 @@
                                             تغییر تم
                                         </button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item active" href="#"><i
-                                                        class="bi bi-brightness-high pe-1"></i>روشن</a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-moon pe-1"></i> تاریک
-                                                </a></li>
+                                            <li>
+                                                <button class="theme-light dropdown-item active">
+                                                    <i class="bi bi-brightness-high pe-1"></i>
+                                                    روشن
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="theme-dark dropdown-item">
+                                                    <i class="bi bi-moon pe-1"></i>
+                                                    تاریک
+                                                </button>
+                                            </li>
                                         </ul>
                                     </div>
                                     <!-- profile dropdown -->
@@ -191,11 +275,420 @@
                             </div>
                         </div>
                     </header>
+                    <!-- tickets -->
+                    <section class="row my-4 g-3 g-lg-4">
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="card bg-info-subtle shadow">
+                                <div class="card-body position-relative d-flex flex-column  py-2 py-lg-3">
+                                    <span class="small">تعداد همه تیکت ها</span>
+                                    <span class="fs-2 ">128</span>
+                                    <i
+                                        class="bi bi-pen position-absolute top-50 end-0 translate-middle fs-1 opacity-50"></i>
+                                </div>
+                                <div class="card-footer ">
+                                    <a
+                                        class="text-decoration-none w-100 icon-link icon-link-hover text-secondary-emphasis d-flex justify-content-center align-items-center">
+                                        <span>مشاهده</span>
+                                        <i class="bi bi-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="card bg-warning-subtle shadow">
+                                <div class="card-body position-relative d-flex flex-column py-2 py-lg-3">
+                                    <span class="small">در دست اقدام</span>
+                                    <span class="fs-2 ">3</span>
+                                    <i
+                                        class="bi bi-book position-absolute top-50 end-0 translate-middle fs-1 opacity-50"></i>
+                                </div>
+                                <div class="card-footer ">
+                                    <a
+                                        class="text-decoration-none w-100 icon-link icon-link-hover text-secondary-emphasis d-flex justify-content-center align-items-center">
+                                        <span>مشاهده</span>
+                                        <i class="bi bi-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="card bg-success-subtle shadow">
+                                <div class="card-body position-relative d-flex flex-column py-2 py-lg-3">
+                                    <span class="small">انجام شده</span>
+                                    <span class="fs-2 ">73</span>
+                                    <i
+                                        class="bi bi-check2-all position-absolute top-50 end-0 translate-middle fs-1 opacity-50"></i>
+                                </div>
+                                <div class="card-footer ">
+                                    <a
+                                        class="text-decoration-none w-100 icon-link icon-link-hover text-secondary-emphasis d-flex justify-content-center align-items-center">
+                                        <span>مشاهده</span>
+                                        <i class="bi bi-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="card bg-danger-subtle shadow">
+                                <div class="card-body position-relative d-flex flex-column py-2 py-lg-3">
+                                    <span class="small">دیده نشده</span>
+                                    <span class="fs-2 ">19</span>
+                                    <i
+                                        class="bi bi-eye-slash position-absolute top-50 end-0 translate-middle fs-1 opacity-50"></i>
+                                </div>
+                                <div class="card-footer">
+                                    <a
+                                        class="text-decoration-none w-100 icon-link icon-link-hover text-secondary-emphasis d-flex justify-content-center align-items-center">
+                                        <span>مشاهده</span>
+                                        <i class="bi bi-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- content -->
+                    <section class="row mb-3 g-3">
+                        <!-- active project -->
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <span class="fw-semibold">پروژه های فعال</span>
+                                    <a href="" class="text-decoration-none text-secondary">
+                                        <span class="">همه</span>
+                                        <i class="bi bi-arrow-left-short"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive-md">
+                                        <table class="table table-striped table-hover text-nowrap align-middle m-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>عنوان</th>
+                                                    <th>وضعیت</th>
+                                                    <th>مدیر</th>
+                                                    <th>اخرین تغییر</th>
+                                                    <th>اعضا تیم</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="m-0">
+                                                <tr>
+                                                    <td class="d-flex">
+                                                        <img src="./assests/img/photo-2.jpg" class="rounded-circle"
+                                                            width="50px" height="50px" alt="">
+                                                        <div class="ps-1">
+                                                            <span class="d-block fw-bold">Landing Page</span>
+                                                            <span class="small text-secondary">پوریا بامبری</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-success-subtle text-success">انجام
+                                                            شده</span>
+                                                    </td>
+                                                    <td>
+                                                        <img class="rounded-circle" src="./assests/img/photo-6.jpg"
+                                                            width="50px" height="50px" alt="">
+                                                        <span class="fw-semibold">محمد محمدی</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-secondary small">22 خرداد</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex flex-nowrap">
+                                                            <img class="rounded-circle border border-light border-2 me-10"
+                                                                src="./assests/img/photo-2.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                            <img class="rounded-circle border border-light border-2 me-10"
+                                                                src="./assests/img/photo-6.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="d-flex">
+                                                        <img src="./assests/img/photo-2.jpg" class="rounded-circle"
+                                                            width="50px" height="50px" alt="">
+                                                        <div class="ps-1">
+                                                            <span class="d-block fw-bold">main page</span>
+                                                            <span class="small text-secondary">پوریا بامبری</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger-subtle text-danger">انجام
+                                                            نشده</span>
+                                                    </td>
+                                                    <td>
+                                                        <img class="rounded-circle" src="./assests/img/photo-2.jpg"
+                                                            width="50px" height="50px" alt="">
+                                                        <span class="fw-semibold">محمد محمدی</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-secondary small">15 خرداد</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex flex-nowrap">
+                                                            <img class="rounded-circle border border-light border-5 me-10"
+                                                                src="./assests/img/photo-2.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                            <img class="rounded-circle border border-light border-3 me-10"
+                                                                src="./assests/img/photo-6.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                            <img class="rounded-circle border border-light border-3 me-10"
+                                                                src="./assests/img/photo-4.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="d-flex">
+                                                        <img src="./assests/img/photo-2.jpg" class="rounded-circle"
+                                                            width="50px" height="50px" alt="">
+                                                        <div class="ps-1">
+                                                            <span class="d-block fw-bold">tailwind</span>
+                                                            <span class="small text-secondary">پوریا بامبری</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-warning-subtle text-warning">در حال انجام
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <img class="rounded-circle" src="./assests/img/photo-6.jpg"
+                                                            width="50px" height="50px" alt="">
+                                                        <span class="fw-semibold">محمد محمدی</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-secondary small">دقایقی پیش</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex flex-nowrap">
+                                                            <img class="rounded-circle border border-light border-2 me-10"
+                                                                src="./assests/img/photo-2.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                            <img class="rounded-circle border border-light border-2 me-10"
+                                                                src="./assests/img/photo-1.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                            <img class="rounded-circle border border-light border-2 me-10"
+                                                                src="./assests/img/photo-5.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                            <img class="rounded-circle border border-light border-2 me-10"
+                                                                src="./assests/img/photo-6.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                            <img class="rounded-circle border border-light border-2 me-10"
+                                                                src="./assests/img/photo-4.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="d-flex">
+                                                        <img src="./assests/img/photo-6.jpg" class="rounded-circle"
+                                                            width="50px" height="50px" alt="">
+                                                        <div class="ps-1">
+                                                            <span class="d-block fw-bold">Landing Page</span>
+                                                            <span class="small text-secondary">پوریا بامبری</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-success-subtle text-success">انجام
+                                                            شده</span>
+                                                    </td>
+                                                    <td>
+                                                        <img class="rounded-circle" src="./assests/img/photo-6.jpg"
+                                                            width="50px" height="50px" alt="">
+                                                        <span class="fw-semibold">محمد محمدی</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-secondary small">22 خرداد</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex flex-nowrap">
+                                                            <img class="rounded-circle border border-light border-2 me-10"
+                                                                src="./assests/img/photo-2.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                            <img class="rounded-circle border border-light border-2 me-10"
+                                                                src="./assests/img/photo-6.jpg" width="35px"
+                                                                height="35px" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- last activites -->
+                        <div class="col-12 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="fw-bold">فعالیت های اخیر</span>
+                                        </div>
+                                        <a href="" class="text-decoration-none small text-secondary">
+                                            <span>همه</span>
+                                            <i class="bi bi-arrow-left-short "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled last-activity">
+                                        <li class="d-flex position-relative">
+                                            <span
+                                                class="me-1 bg-primary-subtle  w-h-35px rounded-circle d-flex justify-content-center align-items-center pb-1">
+                                                <i class="bi bi-share pt-1"></i>
+                                            </span>
+                                            <div>
+                                                <div>
+                                                    <span class="fw-bold">پوریا بامبری</span>
+                                                    <span class="x-small">1 ساعت پیش</span>
+                                                </div>
+                                                <p class="small">اشتراک گذاری محصولات</p>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex position-relative">
+                                            <span
+                                                class="me-1 bg-primary-subtle  w-h-35px rounded-circle d-flex justify-content-center align-items-center pb-1">
+                                                <i class="bi bi-chat-left-dots pt-1"></i>
+                                            </span>
+                                            <div>
+                                                <div>
+                                                    <span class="fw-bold">پوریا بامبری</span>
+                                                    <span class="x-small">دیروز</span>
+                                                </div>
+                                                <p class="small">ثبت نظر روی رابط کاربری سایت</p>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex position-relative">
+                                            <span
+                                                class="me-1 bg-primary-subtle  w-h-35px rounded-circle d-flex justify-content-center align-items-center pb-1">
+                                                <i class="bi bi-star pt-1"></i>
+                                            </span>
+                                            <div>
+                                                <div>
+                                                    <span class="fw-bold">پوریا بامبری</span>
+                                                    <span class="x-small"> 05 دی 1405</span>
+                                                </div>
+                                                <p class="small">ثبت امتیاز</p>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex position-relative">
+                                            <span
+                                                class="me-1 bg-primary-subtle  w-h-35px rounded-circle d-flex justify-content-center align-items-center pb-1">
+                                                <i class="bi bi-person-gear pt-1"></i>
+                                            </span>
+                                            <div>
+                                                <div>
+                                                    <span class="fw-bold">پوریا بامبری</span>
+                                                    <span class="x-small">23 اسفند 1405</span>
+                                                </div>
+                                                <p class="small">تایید اطلاعات حساب کاربری</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- my skils -->
+                        <div class="col-12 col-md-6">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <span>مهارت های من</span>
+                                    <a href="" class="text-decoration-none text-secondary">
+                                        <span>همه</span>
+                                        <i class="bi bi-arrow-left-short"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table">
+                                        <thead>
+                                            <th class="w-50">عنوان</th>
+                                            <th>میزان</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="d-flex">
+                                                    <div class="pe-1">
+                                                        <img src="./assests/img/html.webp" alt="" width="35px"
+                                                            height="35px">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="fw-bold">HTML</span>
+                                                        <span class="small text-secondary">زبان نشانه گذاری</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-danger pt-1" style="width: 80%;">80%
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="d-flex">
+                                                    <div class="pe-1">
+                                                        <img src="./assests/img/css-icon.webp" alt="" width="35px"
+                                                            height="35px">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="fw-bold">css</span>
+                                                        <span class="small text-secondary">زبان استایل دهی </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-primary pt-1" style="width: 80%;">
+                                                            80%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="d-flex">
+                                                    <div class="pe-1">
+                                                        <img src="./assests/img/Bootstrap_logo.svg.png" alt=""
+                                                            width="35px" height="35px">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="fw-bold">bootstrap</span>
+                                                        <span class="small text-secondary">فریمورک css</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-info pt-1" style="width: 80%;">80%
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="d-flex">
+                                                    <div class="pe-1">
+                                                        <img src="./assests/img/javascript-logo-javascript-icon-transparent-free-png.webp"
+                                                            alt="" width="35px" height="35px">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="fw-bold">js</span>
+                                                        <span class="small text-secondary">زبان برنامه نویسی</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-warning pt-1" style="width: 80%;">
+                                                            80%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </main>
-
         </div>
     </section>
+    <!-- js -->
+    <script src="./assests/js/app.js"></script>
 </body>
-
 </html>
